@@ -1,0 +1,6 @@
+{
+  "name": "downloaing assets",
+  "dependencies": {
+    "request": "^2.88.2"
+  }
+}
