@@ -7,8 +7,8 @@ const download = (uri, filename, callback) => {
   });
 };
 
-const downloadAssets = (folder_url, maxIndex, assetsExt) => {
-  for (let i = 1; i <= maxIndex; i++) {
+const downloadAssets = (folder_url, fromIndex, maxIndex, assetsExt) => {
+  for (let i = fromIndex; i <= maxIndex; i++) {
     const fileName = i + '.' + assetsExt;
     download(folder_url + fileName, fileName, () => {
       console.log(fileName);
@@ -16,4 +16,4 @@ const downloadAssets = (folder_url, maxIndex, assetsExt) => {
   }
 }
 
-downloadAssets("https://rbbc.mypinata.cloud/ipfs/QmSm41sSAuKKpnV34LBcrc1BkJdMBHN4b9rbe9MvGCjSBi/", 10, "webp");
+downloadAssets("https://digidaigaku.com/image/", 751, 800, "png");
